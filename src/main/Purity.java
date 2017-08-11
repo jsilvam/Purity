@@ -35,14 +35,13 @@ public class Purity {
 		
 		
 		GithubDownloader git=new GithubDownloader(urlRepository);
-		ZipExtractor ze=new ZipExtractor();
 		
 		File targetFile=git.downloadCommit(commit);
-		File targetFolder=ze.extract(targetFile, new File(git.getLocation(),commit));
+		File targetFolder=ZipExtractor.extract(targetFile, new File(git.getLocation(),commit));
 		
 		
 		File sourceFile=git.downloadCommit(parent);
-		File sourceFolder=ze.extract(sourceFile, new File(git.getLocation(),parent));
+		File sourceFolder=ZipExtractor.extract(sourceFile, new File(git.getLocation(),parent));
 		
 		
 		

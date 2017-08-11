@@ -8,9 +8,9 @@ import java.io.FileOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class ZipExtractor {
+public abstract class ZipExtractor {
 
-	public File extract(File arquivo,File outputFolder) throws Exception{
+	public static File extract(File arquivo,File outputFolder) throws Exception{
 		final int BUFFER = 2048;
     	if(!outputFolder.exists()){
     		outputFolder.mkdir();
