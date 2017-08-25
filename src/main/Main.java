@@ -17,7 +17,7 @@ public class Main {
 		
 		Purity p=new Purity(repositoryUrl);
 		Scanner in = new Scanner(new FileReader(dir+"\\1Part\\"+aux+" - refatoramentos.csv")).useDelimiter(";");
-		FileWriter fw= new FileWriter(new File(dir+"\\2Part\\"+aux+" - refatoramentos1.csv"));
+		FileWriter fw= new FileWriter(new File(dir+"\\2Part\\"+aux+" - refatoramentos.csv"));
 		
 		fw.write("Commit;isRefactoring\n");
 		fw.flush();
@@ -29,7 +29,10 @@ public class Main {
 			aux=in.next();
 			if(!aux.equals(commit)) {
 				commit=aux;
-				refactoring=p.check(commit, in.next());
+				String parent=in.next();
+				refactoring=p.check(commit, parent);
+				for(int i=1;refactoring==1 && i<3;i++)
+					refactoring=p.check(commit, parent);
 				System.out.println("Is refactoring? "+refactoring);
 				fw.write(commit+";"+refactoring+"\n");
 				fw.flush();
@@ -43,10 +46,11 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		int len=args.length;
+		check("https://github.com/square/retrofit");
+		//int len=args.length;
 		
-		for(int i=0;i<len;i++) {
-			check(args[i]);
-		}
+		//for(int i=0;i<len;i++) {
+		//	check(args[i]);
+		//}
 	}
 }
