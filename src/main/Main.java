@@ -19,9 +19,12 @@ public class Main {
 		Scanner in = new Scanner(new FileReader(dir+"\\Part 1\\"+aux+".csv")).useDelimiter(";");
 		FileWriter fw= new FileWriter(new File(dir+"\\Part 2\\"+aux+".csv"));
 		
+		FileWriter fw2= new FileWriter(new File(dir+"\\Part 2\\"+aux+" - log.txt"));
+		
 		fw.write("Commit;isRefactoring\n");
 		fw.flush();
 		String commit="";
+		int cont=0;
 		
 		in.nextLine();
 		while(in.hasNext()) {
@@ -36,21 +39,25 @@ public class Main {
 				System.out.println("Is refactoring? "+refactoring);
 				fw.write(commit+";"+refactoring+"\n");
 				fw.flush();
+				cont++;
+				fw2.write("\nCommit atual: "+cont);
+				fw2.flush();
 			}
-			
 			in.nextLine();
 		}
-		fw.close();
+		fw.close();									
+		fw2.close();
 		in.close();
 	}
 
 	public static void main(String[] args) throws Exception {
+
 		
+		check("https://github.com/clojure/clojure");
+		check("https://github.com/alibaba/fastjson");
 		check("https://github.com/jankotek/mapdb");
-		//int len=args.length;
-		
-		//for(int i=0;i<len;i++) {
-		//	check(args[i]);
-		//}
+		check("https://github.com/alibaba/druid");
+		check("https://github.com/mcMMO-Dev/mcMMO");
+
 	}
 }

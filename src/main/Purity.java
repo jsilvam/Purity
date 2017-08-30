@@ -59,7 +59,7 @@ public class Purity {
 		File libFolder = new File(sourceFolder, "target\\dependency");
 		if (libFolder.exists())
 			source.setLibFolder(libFolder);
-		System.out.println("Source project: "+source.getLibFolder());
+		System.out.println("Lib folder source project: "+source.getLibFolder());
 		
 		
 		Project target = new Project();
@@ -78,7 +78,7 @@ public class Purity {
 		File targetLibFolder = new File(targetFolder, "target\\dependency");
 		if (targetLibFolder.exists())
 			target.setLibFolder(targetLibFolder);
-		System.out.println("Target project: "+target.getLibFolder());
+		System.out.println("Lib folder target project: "+target.getLibFolder());
 
 		
 		//SafeRefactor sr = new SafeRefactorImp(source, target);
