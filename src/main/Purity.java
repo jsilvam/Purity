@@ -43,10 +43,6 @@ public class Purity {
 		File sourceFolder=ZipExtractor.extract(sourceFile, new File(git.getLocation(),parent));
 		
 		
-		
-		//File targetFolder=new File("C:\\tmp\\Projeto\\Downloads\\jasmine-maven-plugin\\88e4387b52361442b7a70c84cd2e3625258d4ae2");
-		//File sourceFolder=new File("C:\\tmp\\Projeto\\Downloads\\jasmine-maven-plugin\\36217276b60cb69c9acf3a1f21b7017e390210b5");
-		
 		Project source = new Project();
 		source.setProjectFolder(sourceFolder);
 		File bin=new File(sourceFolder, "bin");
