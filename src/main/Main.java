@@ -11,13 +11,13 @@ public class Main {
 	
 	private static void check(String repositoryUrl) throws Exception {
 		
-		String dir  = "C:\\Users\\Jaziel Moreira\\Dropbox\\UFCG\\Projeto\\Dados\\CSVs\\refatoramentos"; //windows
+		String dir  = "C:\\Users\\Jaziel Moreira\\Dropbox\\UFCG\\Projeto\\Dados\\CSVs\\Refatoramentos"; //windows
 		String aux=repositoryUrl.substring(repositoryUrl.lastIndexOf("/")+1);
 		int refactoring;
 		
 		Purity p=new Purity(repositoryUrl);
-		Scanner in = new Scanner(new FileReader(dir+"\\1Part\\"+aux+" - refatoramentos.csv")).useDelimiter(";");
-		FileWriter fw= new FileWriter(new File(dir+"\\2Part\\"+aux+" - refatoramentos.csv"));
+		Scanner in = new Scanner(new FileReader(dir+"\\Part 1\\"+aux+".csv")).useDelimiter(";");
+		FileWriter fw= new FileWriter(new File(dir+"\\Part 2\\"+aux+".csv"));
 		
 		fw.write("Commit;isRefactoring\n");
 		fw.flush();
@@ -46,7 +46,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		check("https://github.com/square/retrofit");
+		check("https://github.com/jankotek/mapdb");
 		//int len=args.length;
 		
 		//for(int i=0;i<len;i++) {
