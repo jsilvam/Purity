@@ -10,8 +10,12 @@ public class Main {
 	public void test(int value) {
 		if(t(value)) {
 			System.out.println("test");
+			System.out.println("test1");
+			System.out.println("test2");
 		}else if(t(value)) {
 			System.out.println("test");
+			System.out.println("test1");
+			System.out.println("test2");
 		}
 	}
 	
