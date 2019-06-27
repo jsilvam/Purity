@@ -8,22 +8,17 @@ import java.util.Scanner;
 public class Main {
 	
 	public void test(int value) {
-		if(t(value)) {
-			print();
-		}else if(t(value)) {
-			print();
+		if(value>5) {
+			System.out.println("test");
+			System.out.println("test1");
+			System.out.println("test2");
+		}else if(value>5) {
+			System.out.println("test2");
+			System.out.println("test3");
+			System.out.println("test4");
 		}
 	}
 	
-	public boolean t(int value) {
-		return value>5;
-	}
-	
-	public void print() {
-		System.out.println("test");
-		System.out.println("test1");
-		System.out.println("test2");
-	}
 	
 	private static void check(String repositoryUrl) throws Exception {
 		
