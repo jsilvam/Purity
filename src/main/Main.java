@@ -8,11 +8,15 @@ import java.util.Scanner;
 public class Main {
 	
 	public void test(int value) {
-		if(value>5) {
+		if(t(value)) {
 			System.out.println("test");
-		}else if(value>5) {
+		}else if(t(value)) {
 			System.out.println("test");
 		}
+	}
+	
+	public boolean t(int value) {
+		return value>5;
 	}
 	
 	private static void check(String repositoryUrl) throws Exception {
