@@ -9,18 +9,20 @@ public class Main {
 	
 	public void test(int value) {
 		if(t(value)) {
-			System.out.println("test");
-			System.out.println("test1");
-			System.out.println("test2");
+			print();
 		}else if(t(value)) {
-			System.out.println("test");
-			System.out.println("test1");
-			System.out.println("test2");
+			print();
 		}
 	}
 	
 	public boolean t(int value) {
 		return value>5;
+	}
+	
+	public void print() {
+		System.out.println("test");
+		System.out.println("test1");
+		System.out.println("test2");
 	}
 	
 	private static void check(String repositoryUrl) throws Exception {
