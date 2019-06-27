@@ -27,6 +27,20 @@ public class Main {
 		}
 	}
 	
+	public void test2(int value) {
+		if(value>5) {
+			System.out.println("test");
+			System.out.println("test1");
+			System.out.println("test2");
+		}
+		System.out.println("...");
+		if(value>5) {
+			System.out.println("test");
+			System.out.println("test1");
+			System.out.println("test2");
+		}
+	}
+	
 
 	
 	
