@@ -7,7 +7,13 @@ import java.util.Scanner;
 
 public class Main {
 	
-	
+	public void test(int value) {
+		if(value>5) {
+			System.out.println("test");
+		}else if(value>5) {
+			System.out.println("test");
+		}
+	}
 	
 	private static void check(String repositoryUrl) throws Exception {
 		
